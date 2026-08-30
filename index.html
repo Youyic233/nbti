@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NBTI · 奶龙人格测试</title>
+  <meta name="description" content="30 道题，测测你是哪种奶龙。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- 首页 -->
+    <section id="view-home" class="view view-home is-active">
+      <div class="home-hero" id="home-dragon"></div>
+      <p class="home-eyebrow">奶 龙 人 格 测 试</p>
+      <h1 class="home-title">NBTI</h1>
+      <p class="home-sub">30 道题，测测你是哪种奶龙。</p>
+      <button class="btn btn-primary" id="btn-start">开始测试</button>
+      <p class="home-note">约 3 分钟 · 结果仅供娱乐</p>
+    </section>
+
+    <!-- 答题页 -->
+    <section id="view-quiz" class="view view-quiz">
+      <header class="quiz-header">
+        <span class="quiz-counter" id="quiz-counter">1 / 30</span>
+        <div class="progress" role="progressbar" aria-label="答题进度">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </header>
+      <h2 class="quiz-question" id="quiz-question"></h2>
+      <div class="quiz-options" id="quiz-options"></div>
+      <footer class="quiz-nav">
+        <button class="btn btn-ghost" id="btn-prev">上一题</button>
+        <button class="btn btn-primary" id="btn-next">下一题</button>
+      </footer>
+    </section>
+
+    <!-- 结果页 -->
+    <section id="view-result" class="view view-result">
+      <p class="result-eyebrow">你的 NBTI 人格类型是</p>
+      <div class="result-hero" id="result-dragon"></div>
+      <h2 class="result-name" id="result-name"></h2>
+      <p class="result-code" id="result-code"></p>
+      <p class="result-faction" id="result-faction"></p>
+      <p class="result-desc" id="result-desc"></p>
+
+      <div class="result-bars" id="result-bars"></div>
+
+      <div class="result-actions">
+        <button class="btn btn-primary" id="btn-share">分享 / 复制结果</button>
+        <button class="btn btn-ghost" id="btn-restart">重新测试</button>
+      </div>
+      <p class="share-tip" id="share-tip" hidden>结果已复制，去粘贴分享吧</p>
+    </section>
+
+  </main>
+
+  <script src="data/questions.js"></script>
+  <script src="data/types.js"></script>
+  <script src="js/dragon.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
